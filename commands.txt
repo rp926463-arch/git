@@ -1,0 +1,7 @@
+git init
+git remote add origin https://url.git
+git pull origin main --allow-unrelated-histories
+git add *
+git status
+git commit -m "Initial Commit"
+git push origin HEAD:main
