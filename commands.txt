@@ -5,3 +5,98 @@ git add *
 git status
 git commit -m "Initial Commit"
 git push origin HEAD:main
+
+--For first 
+git push -u -f origin main
+_____________________________________________________________
+#CREATE NEW BRANCH
+git checkout -b test-branch main
+
+git branch -vv
+--currently we are in test-branch
+
+#CHANGE BRANCH
+git checkout main
+
+git checkout test-branch
+
+git push --set-upstream origin test-branch
+_____________________________________________________________
+#FETCH ALL NEW CHAHGES ON REMOTE
+git fetch --all
+
+#show list of remote branches
+git branch -r
+_____________________________________________________________
+#DELETE REMOTE BRANCH
+git push -d origin demo
+
+#DELETE LOCAL BRANCH
+git branch -d test-branch
+_____________________________________________________________
+#MERGING + CONFLICT
+
+git checkout -b branch-1 main
+git checkout -b branch-2 main
+
+git branch -vv
+git checkout branch-1
+--make chages in some lines of code
+git add .
+git commit -m "changed h1 tag"
+git status
+git push --set-upstream origin branch-1
+
+git branch -vv
+git checkout branch-2
+--make chages in same lines of code
+git add .
+git commit -m "changed h1 tag"
+git status
+git push --set-upstream origin branch-2
+
+git checkout main
+git merge branch-1
+git push
+
+git merge branch-2
+--got merge conflict
+--either accept current/previus change and save
+git add .
+git commit -m "merged branch-2"
+git push
+________________________________________________________________
+#REVERT COMMIT
+To revert commit you will basically create new commit with changes that roll back commit that you want to revert.
+
+--do bad changes in file
+git status 
+git add .
+git commit -m "Bad Commit"
+git push
+
+git log --online
+--get bad-commit cmt_ID
+git revert cmt_ID
+git status
+git push
+________________________________________________________________
+#GIT Stash
+allows you to store copy of your work without actually commiting anything
+
+--make code changes
+git status
+git add .
+git branch -v
+git stash
+git stash list
+git stash apply 1
+git stash save
+
+git stash list
+git stash clear
+git stash list
+
+
+
+
