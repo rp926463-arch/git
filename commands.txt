@@ -1,3 +1,6 @@
+branching strategy:
+https://medium.com/@dmosyan/version-control-branching-strategies-e68e8d5ef1e0
+
 git init
 git remote add origin https://url.git
 git pull origin main --allow-unrelated-histories
