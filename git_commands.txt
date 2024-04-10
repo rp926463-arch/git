@@ -1,0 +1,35 @@
+git clone https://github.com/rp*****.git
+
+--see all remote branches
+git branch -r
+
+--Create new branch from master in local
+git branch dev master
+
+--change current branch
+git checkout dev
+
+--see current branch
+git branch --show-current
+
+--## Code changes added ##--
+
+--list unstaged files
+git status
+
+--stage all file
+git add *
+
+--commit changes to current brach which is (dev)
+git commit -m "Initial Commit"
+
+--push new branch to remote
+git push --set-upstream origin dev
+
+--see remote branches
+git branch -r
+
+--push local dev changes to remote dev
+git push origin HEAD:dev
+
+
