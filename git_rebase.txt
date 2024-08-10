@@ -1,0 +1,16 @@
+if new commits in main are not in same file
+    git fetch origin main
+    git checkout feature_branch_name
+    git rebase origin/main
+    git status
+    git push origin feature_branch_name --force
+
+if conflict
+    git fetch origin main
+    git checkout feature_branch_name
+    git rebase origin/main
+    -- it will show there is conflict, you can resolve conflict & remove markups
+    git add filename
+    git rebase --continue
+    git status
+    git push origin feature_branch_name --force

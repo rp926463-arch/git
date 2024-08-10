@@ -32,4 +32,12 @@ git branch -r
 --push local dev changes to remote dev
 git push origin HEAD:dev
 
+--To see commit history(to come out use q)
+git log --all --decorate --oneline --graph
+
+--create shortcut
+git config --global alias.dog "log --all --decorate --oneline --graph"
+
+--list git aliases
+git config --global --get-regexp alias
 
